@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:lrc="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="success.liang.com.music_liang.DetialActivity"
+    android:background="@mipmap/detial_back_one"
+    android:id="@+id/ll_detial">
+
+    <ToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#0000"
+        android:layout_weight="1"
+        app:titleTextColor="#ffffff"
+        app:subtitleTextColor="#ffffff"
+        app:title="title"
+        app:subtitle="subtitle"
+        app:navigationIcon="@mipmap/detial_back">
+    </ToolBar>
+    <!--<TextView
+        android:id="@+id/tv_words"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:gravity="center_vertical"
+        android:text="歌词"
+        android:textColor="#ffffff"
+        />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        >
+        <success.liang.com.music_liang.bean.LrcView
+            android:id="@+id/lrc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#0000"
+            lrc:currentTextColor="#f24d21"
+            lrc:normalTextColor="@android:color/white"
+            lrc:rows="10"
+            lrc:textSize="20sp"
+            lrc:dividerHeight="10dip"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_progress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:text="00:00"
+            android:textColor="#ffffff"/>
+        <SeekBar
+            android:id="@+id/sb_process_two"
+            android:layout_width="0dp"
+            android:layout_height="7dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="6"
+            android:maxHeight="1dp"
+            android:minHeight="1dp"
+            android:progressDrawable="@drawable/progress_style"
+            android:secondaryProgress="0"
+            android:thumbOffset="0dip"
+            android:thumb="@mipmap/point"
+            />
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:text="00:00"
+            android:textColor="#ffffff"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#0000">
+        <Button
+            android:id="@+id/btn_mode"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:background="@mipmap/detial_random"
+            />
+        <Button
+            android:id="@+id/btn_left"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="100dp"
+            android:background="@mipmap/detial_left"
+            />
+        <Button
+            android:id="@+id/btn_detial_startstop"
+            android:layout_width="30dp"
+            android:layout_height="43dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/detial_stop"/>
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="100dp"
+            android:background="@mipmap/detial_right"
+            />
+
+        <Button
+            android:id="@+id/btn_about"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:background="@mipmap/about_logo"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

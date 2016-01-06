@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    android:theme="@style/AppTheme"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_scrolling"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    tools:context=".ScrollingActivity"
+    android:background="@color/material_grey_50">
+        <success.liang.com.music_liang.MyListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_songs"
+            android:layout_weight="8"
+            android:choiceMode="singleChoice"
+            android:divider="#c0c0c0"
+            android:dividerHeight="0.5dp"
+            android:background="@color/material_grey_50">
+        </success.liang.com.music_liang.MyListView>
+
+
+
+
+</android.support.v4.widget.NestedScrollView>

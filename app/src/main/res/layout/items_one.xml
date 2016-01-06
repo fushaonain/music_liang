@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:minHeight="50dp"
+    android:layout_marginLeft="15dp"
+    android:paddingLeft="15dp"
+    android:background="@color/material_grey_50">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_music"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/music"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_songs_name"
+        android:layout_toRightOf="@id/iv_music"
+        android:layout_centerVertical="true"
+        android:text="个人信息"
+        android:layout_marginLeft="25dp"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:singleLine="true"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:src="@mipmap/add"/>
+
+</RelativeLayout>

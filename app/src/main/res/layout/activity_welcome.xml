@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="success.liang.com.music_liang.welcome"
+    android:background="@mipmap/welcome">
+
+    <ImageView
+        android:id="@+id/iv_welcome_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/welcome_logo"
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center_vertical|center_horizontal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="优米音乐"
+        android:layout_below="@id/iv_welcome_logo"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_vertical|center_horizontal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="抢先版"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="220dp"/>
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="优米音乐(v1.0)"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="240dp"
+        android:textColor="#ffffff"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_vertical|center_horizontal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中南大学软件学院 版权所有"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="5dp"
+        android:textColor="#ffffff"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CSU-2015 All Right Reserved"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:textColor="#ffffff"
+        android:layout_marginTop="5dp"/>-->
+
+</LinearLayout>

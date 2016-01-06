@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.design.widget.CoordinatorLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ScrollingActivity"
+    android:background="@color/material_grey_50">
+
+    <android.support.design.widget.AppBarLayout android:id="@+id/app_bar"
+        android:fitsSystemWindows="true" android:layout_height="@dimen/app_bar_height"
+        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/back"
+                app:layout_collapseMode="parallax"
+                />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:navigationIcon="@mipmap/ma"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_scrolling" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        android:src="@mipmap/emotion" />
+
+
+
+</android.support.design.widget.CoordinatorLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@mipmap/logo"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/btn_logo"/>
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="7dp"
+            android:id="@+id/sb_process"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/btn_logo"
+            android:maxHeight="1dp"
+            android:minHeight="1dp"
+            android:progressDrawable="@drawable/progress_style"
+            android:thumbOffset="0dip"
+            android:thumb="@mipmap/point"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name"
+            android:layout_below="@id/sb_process"
+            android:layout_toRightOf="@id/btn_logo"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="歌曲名"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:layout_marginTop="1.5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_writer"
+            android:layout_below="@id/tv_name"
+            android:layout_toRightOf="@id/btn_logo"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="作者名"
+            android:textSize="10dp"
+            android:layout_marginTop="1.5dp"
+            />
+        <Button
+            android:id="@+id/btn_start_stop"
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/sb_process"
+            android:background="@mipmap/start"
+            android:layout_toLeftOf="@+id/btn_next"
+            android:layout_marginRight="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="7dp"
+            />
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/sb_process"
+            android:layout_marginRight="18dp"
+            android:background="@mipmap/next"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="11.5dp"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>
